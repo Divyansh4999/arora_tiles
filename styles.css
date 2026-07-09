@@ -3,58 +3,75 @@
     padding:0;
     margin:0;
     scroll-behavior: smooth;
-    justify-content: center;
 }
 
 body{
   background-color: #F2EDE4;
   color:#2B2620;
   width:100%;
-  margin: 10px auto;
+  margin:0;
+  font-family: Poppins, Inter, sans-serif;
+}
+
+.site-header{
+  padding: 20px 16px 10px;
+  text-align: center;
 }
 
 h1{
     font-family: Playfair Display, serif;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
-    margin: 20px auto 5px;
-}
-
-hr{
-    height:5px;
-    border-radius:12px;
-    margin: 10px;
+    margin: 20px auto 8px;
+    line-height: 1.2;
 }
 
 #choice{
     font-family: Impact , sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
-    margin: 20px auto;
+    margin: 20px auto 10px;
 }
 .tagline{
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 400;
     margin: 10px auto 0;
     justify-content: center;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: 1.5;
+    max-width: 680px;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:10px;
+  margin: 16px auto 8px;
 }
 
 .menu{
    display:flex;
    flex-wrap: wrap;
    justify-content: center;
+   gap:8px;
+   padding: 0 8px;
 }
 
 .btn{
     border:2px solid black;
-    margin: 5px;
-    padding: 10px;
+    margin: 4px 0;
+    padding: 12px 14px;
     color:#2B2620;
     background:transparent;
     box-shadow:0 2px 8px rgba(0,0,0,0.8);
-    border-radius:12px;
+    border-radius:999px;
     text-decoration:none;
+    min-height: 46px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 0.95rem;
 }
 
 .btn:hover{
@@ -64,34 +81,49 @@ hr{
     box-shadow:0 4px 16px rgba(0,0,0,0.3);
 }
 
+.btn-primary{
+    background-color: #c08923;
+    color: #ffffff;
+    border-color: #c08923;
+}
+
+.btn-primary:hover{
+    background-color: #a56f15;
+    border-color: #a56f15;
+}
+
 h2{
     font-family: Playfair Display, serif;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
-    margin: 5px auto;
+    margin: 5px auto 8px;
 }
 
 p{
     font-family: Poppins, Inter, sans-serif;
     font-size: 1rem;
     text-align: center;
-    margin:auto;
+    margin: 0 auto 10px;
+    padding: 0 8px;
+    line-height: 1.6;
 }
 
 footer{
     font-family: Poppins, Inter, sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     text-align: center;
-    margin: 20px auto;
+    margin: 20px auto 0;
     background-color: #c08923;
+    padding: 16px 12px;
 }
 
 section{
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 20px auto;
+    margin: 16px auto;
     flex-direction: column;
+    padding: 0 10px;
 }
 
 .card-holder{
@@ -99,25 +131,22 @@ section{
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    margin: 20px auto;
+    margin: 12px auto 0;
     box-sizing:border-box;
     width:100%;
-   
 }
 
 .card{
     border:2px solid black;
     display:inline-flex;
     flex-wrap: wrap;
-    margin: 5px;
+    margin: 6px 0;
     padding: 10px;
     color:#2B2620;
     background:transparent;
     box-shadow:0 2px 8px rgba(0,0,0,0.8);
     border-radius:12px;
     text-decoration:none;
-    flex: 1 1 200px;
-    object-fit:cover;
     width:100%;
 }
 
@@ -133,17 +162,72 @@ img{
     height:auto;
     object-fit:cover;
     transition: transform 0.3s ease;
+    border-radius:8px;
 }
 
 img:hover{
-    transform:scale(1.05);
+    transform:scale(1.03);
 }
 
 #contact{
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 20px auto;
+    margin: 10px auto 20px;
     flex-direction: column;
-    margin-bottom: 30px;
+}
+
+.back-to-top{
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: #c08923;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  z-index: 1000;
+}
+
+.back-to-top:hover{
+  background-color: #a56f15;
+}
+
+@media (max-width: 700px) {
+  .site-header {
+    padding: 18px 12px 8px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-actions,
+  .menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 13px 14px;
+  }
+
+  .card-holder {
+    gap: 4px;
+  }
+
+  .card {
+    margin: 4px 0;
+  }
+
+  section {
+    padding: 0 8px;
+  }
 }
