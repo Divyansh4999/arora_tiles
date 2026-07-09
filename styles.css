@@ -3,6 +3,7 @@
     padding:0;
     margin:0;
     scroll-behavior: smooth;
+    justify-content: center;
 }
 
 body{
@@ -13,23 +14,30 @@ body{
 }
 
 h1{
-    font-family: serif;
+    font-family: Playfair Display, serif;
     font-size: 2.5rem;
     text-align: center;
     margin: 20px auto 5px;
 }
 
+hr{
+    height:5px;
+    border-radius:12px;
+    margin: 10px;
+}
+
 #choice{
-    font-family: sans-serif;
+    font-family: Impact , sans-serif;
     font-size: 1.5rem;
     text-align: center;
     margin: 20px auto;
 }
 .tagline{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 400;
     margin: 10px auto 0;
     justify-content: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .menu{
@@ -57,21 +65,21 @@ h1{
 }
 
 h2{
-    font-family: serif;
+    font-family: Playfair Display, serif;
     font-size: 1.5rem;
     text-align: center;
     margin: 5px auto;
 }
 
 p{
-    font-family: sans-serif;
+    font-family: Poppins, Inter, sans-serif;
     font-size: 1rem;
     text-align: center;
     margin:auto;
 }
 
 footer{
-    font-family: sans-serif;
+    font-family: Poppins, Inter, sans-serif;
     font-size: 0.8rem;
     text-align: center;
     margin: 20px auto;
@@ -129,4 +137,13 @@ img{
 
 img:hover{
     transform:scale(1.05);
+}
+
+#contact{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px auto;
+    flex-direction: column;
+    margin-bottom: 30px;
 }
