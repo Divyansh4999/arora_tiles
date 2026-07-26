@@ -14,7 +14,7 @@ body{
 }
 
 .site-header{
-  padding: 20px 16px 10px;
+  padding: 16px 12px 10px;
   text-align: center;
 }
 
@@ -22,8 +22,35 @@ h1{
     font-family: Playfair Display, serif;
     font-size: 2rem;
     text-align: center;
-    margin: 20px auto 8px;
+    margin: 12px auto 8px;
     line-height: 1.2;
+}
+
+.site-logo {
+    margin: 0 auto 8px;
+}
+
+.site-logo a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-logo img {
+    width: auto;
+    max-width: min(220px, 78vw);
+    height: auto;
+    object-fit: contain;
+    border-radius: 0;
+}
+
+.page-title {
+    font-family: Playfair Display, serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 6px auto 0;
+    color: #2B2620;
 }
 
 #choice{
@@ -45,9 +72,11 @@ h1{
 .hero-actions{
   display:flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   gap:10px;
   margin: 16px auto 8px;
+  width: 100%;
 }
 
 .menu{
@@ -56,6 +85,7 @@ h1{
    justify-content: center;
    gap:8px;
    padding: 0 8px;
+   flex-direction: column;
 }
 
 .btn{
@@ -72,6 +102,7 @@ h1{
     align-items:center;
     justify-content:center;
     font-size: 0.95rem;
+    width: 100%;
 }
 
 .btn:hover{
@@ -199,6 +230,18 @@ img:hover{
   background-color: #a56f15;
 }
 
+@media (min-width: 701px) {
+  .hero-actions,
+  .menu {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .btn {
+    width: auto;
+  }
+}
+
 @media (max-width: 700px) {
   .site-header {
     padding: 18px 12px 8px;
@@ -206,17 +249,6 @@ img:hover{
 
   h1 {
     font-size: 1.7rem;
-  }
-
-  .hero-actions,
-  .menu {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .btn {
-    width: 100%;
-    padding: 13px 14px;
   }
 
   .card-holder {
