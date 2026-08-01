@@ -180,9 +180,10 @@ section{
 
 .card{
     border:2px solid black;
-    display:inline-flex;
+    display:flex;
+    justify-content:center;
     flex-wrap: wrap;
-    margin: 6px 0;
+    margin: 6px auto;
     padding: 10px;
     color:#2B2620;
     background:transparent;
@@ -190,6 +191,8 @@ section{
     border-radius:12px;
     text-decoration:none;
     width:100%;
+    max-width:600px;
+    height:auto;
 }
 
 .card:hover{
@@ -201,6 +204,7 @@ section{
 
 img{
     width:100%;
+    max-width:fit-content;
     height:auto;
     object-fit:cover;
     transition: transform 0.3s ease;
