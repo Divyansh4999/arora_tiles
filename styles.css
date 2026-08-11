@@ -245,6 +245,13 @@ img:hover{
   background-color: #a56f15;
 }
 
+/*========== For old designs not in stock ==========*/
+.old{
+    display:none;
+}
+/*====================*/
+
+
 @media (min-width: 701px) {
   .hero-actions,
   .menu {
@@ -278,3 +285,4 @@ img:hover{
     padding: 0 8px;
   }
 }
+
